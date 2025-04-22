@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Frontend</title>
+</head>
+<body>
+  <h1>Send Request</h1>
+  <button onclick="makeRequest()">Click Me</button>
+
+  <script>
+    function makeRequest() {
+      fetch('http://localhost:3000/data') // this hits your backend
+        .then(response => response.json())
+        .then(data => {
+          console.log("Data from backend:", data);
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
+    }
+  </script>
+</body>
+</html>
