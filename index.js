@@ -6,10 +6,12 @@ app.use(cors()); // middleware for cross-origin requests
 
 app.get('/data', (req, res) => {
   res.json({ message: 'Hello from backend!' });
+  console.log("data");
 });
 
 app.get('/', (req, res) => {
   res.json({ message: 'Hello from root!' });
+  console.log("root");
   
 });
 
