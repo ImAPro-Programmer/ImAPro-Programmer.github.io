@@ -13,6 +13,7 @@
         .then(response => response.json())
         .then(data => {
           console.log("Data from backend:", data);
+          alert("data: " + data.message);
         })
         .catch(error => {
           console.error("Error:", error);
